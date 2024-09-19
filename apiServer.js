@@ -54,6 +54,11 @@ const authenticateToken = (req, res, next) => {
     });
 };
 
+
+app.get('/', (req, res) => {
+    res.send('Welcome to the Gift Delivery API');
+});
+
 // ===================== USER SIGNUP =====================
 app.post('/register', async (req, res) => {
     const { email, password, firstName, lastName, phoneNumber, address, postcode, state } = req.body;
