@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');  // For JWT authentication
 const MongoClient = require('mongodb').MongoClient;
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const jwtSecret = 'Programmer@102';  // Secret for signing JWT
 
 app.use(express.json());
